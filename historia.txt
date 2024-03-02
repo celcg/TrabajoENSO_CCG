@@ -12,7 +12,7 @@ git commit -m "Ej3: he creado las carpetas iniciales del repositorio y he añadi
 
 ### Ejercicio 4
 git log #para averiguar el identificador del commit
-git tag -a R1 7e71cad704f760186ecd174a9132759f025fcb52 -m "Versión R1"  #etiquetar el commit como la versión "R1"
+git tag -a R1 b84087c5a91f5d897211d263227e9b7eef1e3d78 -m "Versión R1"  #etiquetar el commit como la versión "R1"
 
 ###Ejercicio 5 
 git branch Mejoras  
@@ -25,7 +25,7 @@ git add 2 #actualizar la staging area
 git commit -m "Ej6: Propuestas y Doc v2 en la rama Mejoras" #confirmo los cambios, es una buena práctica antes de hacer merge
 
 ##Ejercicio 7
-git switch Mejoras #cambio a la rama principal  
+git switch master #cambio a la rama principal  
 git merge Mejoras #mezclo la rama principal y Mejoras
 git branch -d Mejoras  #borrar la rama Mejoras
 
@@ -42,9 +42,21 @@ git tag -a R2  f56a6d1f3e3f4ed73ef224f0c7f82ad528cc528d -m "Versión R2"  #etiqu
 #sustituyo el doc de la version 2 por la 3 y confirmo los cambios
 git add . 
 git commit -m "Ej10: Actualizo con version 3 del documento ControldeCambios"
-#añado las plantillas y el doc de la v3
+
+### Ejercicio 11
+git log 
+git reset --hard  f56a6d1f3e3f4ed73ef224f0c7f82ad528cc528d  #vuelvo al estado del commit hecho en el ej9
+#añado las plantillas y el doc de la v3 y actualizo el repositorio
 git add .
 git commit -m "Ej11: he añadido las plantillas de la v3 y el doc de ControldeCambios v3"
 git log #para averiguar el identificador del commit
-git tag -a R3  dad9f48c10372914cdf4ba29716e19cbd8f0f500 -m "Versión R3"  #etiquetar el commit como la versión "R3"
+git tag -a R3 54ae3fb37460ff3863a0e3a7876dc1ba411ecf57  -m "Versión 3" #etiquetar el commit como la versión "R3"
+
+###Ejercicio 12
+git remote add origin git@github.com:celtiacg/TrabajoIndividual_ENSO_CCG.git   #Conectar el repositorio local al remoto
+git add .  #actualizar el repositorio 
+git commit -m "Primer commit"
+git push -u origin master #enviar cambios al repositorio remoto
+
+
 
