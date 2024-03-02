@@ -5,3 +5,17 @@ git init  #crear repositorio
 ### Ejercicio 2
 # He copiado el documento v1 a la carpeta especificada
 touch historia.txt # He creado historia.txt en la raiz
+
+### Ejercicio 3
+ git add . #desde la raiz, guardar todos los subdirectorios y documentos
+git commit -m "Ej3: he creado las carpetas iniciales del repositorio y he añadido la primera version del doc de cambios y las plantillas"
+
+### Ejercicio 4
+git log #para averiguar el identificador del commit
+git tag -a R1 7e71cad704f760186ecd174a9132759f025fcb52 -m "Versión R1"  #etiquetar el commit como la versión "R1"
+
+###Ejercicio 5 
+git branch Mejoras  
+git switch Mejoras # crear rama y cambiarse a esa
+# incluyo  el fichero pdf con las propuestas de mejora en la carpeta ControldeCambios
+git add ./Procesos/ControlDeCambios/DP_ControldeCambios_Grupo1.pdf   #añadir el fichero a la staging area
