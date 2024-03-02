@@ -1,0 +1,7 @@
+### Ejercicio 1
+git init  #crear repositorio
+# A continuación, he creado las carpetas con mkdir
+
+### Ejercicio 2
+# He copiado el documento v1 a la carpeta especificada
+touch historia.txt # He creado historia.txt en la raiz
