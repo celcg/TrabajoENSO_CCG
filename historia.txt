@@ -53,10 +53,26 @@ git log #para averiguar el identificador del commit
 git tag -a R3 54ae3fb37460ff3863a0e3a7876dc1ba411ecf57  -m "Versión 3" #etiquetar el commit como la versión "R3"
 
 ###Ejercicio 12
-git remote add origin git@github.com:celtiacg/TrabajoIndividual_ENSO_CCG.git   #Conectar el repositorio local al remoto
+git remote add origin https://github.com/celcg/TrabajoENSO_CCG.git
 git add .  #actualizar el repositorio 
-git commit -m "Primer commit"
-git push -u origin master #enviar cambios al repositorio remoto
+git commit -m "Ej12: he creado un repositorio remoto y voy a enviar los cambios con la v3"
+git push -u origin master  #enviar rama principal
+git push --tags  #enviar tags
+
+###Ejercicio 13 
+git fetch origin  #traer cualquier cambio nuevo del repositorio remoto a tu repositorio local
+git diff master origin/master #Comparar rama local con la rama remota
+#otra opcion es git pull origin master, que fusionará los cambios
+
+###Ejercicio 14
+git diff origin/master historia.txt  #compara los cambios entre el txt actual y el del repositorio
+
+
+###Ejercicio 15  Actualizar el repositorio remoto con todos los cambios.
+git add .  #actualizar el repositorio 
+git commit -m "Ej15: he terminado el trabajo y voy a subir todos los cambios de los ejercicios al repositorio remoto."
+git push -u origin master  #enviar rama principal
+
 
 
 
